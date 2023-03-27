@@ -13,6 +13,6 @@ Example used: we send http requests and wait for response.
 
 Benchmark:
 - Standard = 44 seconds
-- Multi Processing = 8.8 seconds
-- Multi Threading = 3.3 seconds
-- Asyncio = 3.3 seconds
+- Multi Processing = 8.8 seconds (more sutable for cpu bound tasks)
+- Multi Threading = 3.3 seconds (can cause problems, dead lock, race condition, overhead of threads)
+- Asyncio = 3.3 seconds (single thread, where code decides when to leave a task on a single thread)
