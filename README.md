@@ -10,3 +10,9 @@ Example used: we send http requests and wait for response.
    but due to Global Intepreter Lock, cannot parallelize execution. only allow 1 thread to execute at a time
    still can be fast due to contacts switching between threads, almost like coroutines but with multiple threads.
 3) Asyncio: does contact switching for concurrency, use single thread, it is your code that decides when to leave control of the running thread so that some other portion of code can take control of main thread. (Uses context switching between tasks)
+
+Benchmark:
+standard = 44 seconds
+Multi Processing = 8.8 seconds
+Multi Threading = 3.3 seconds
+Asyncio = 3.3 seconds
